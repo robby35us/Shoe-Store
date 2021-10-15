@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">ShoeStore</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="email_label">Email</string>
     <string name="login">Login</string>
@@ -11,4 +10,20 @@
     <string name="log_in">Log In</string>
     <string name="logo_content_desc">Sole logo</string>
     <string name="shoes_image_content_desc">A big pile of multi-colored shoes</string>
+    <string name="welcome_to_soul">Welcome to SOUL!</string>
+    <string name="soul_desc">Large or small, necessary or completely frivolous, your shoe stash is an essential part of keeping your wardrobe so fresh and so clean. You need a kick-ass way to keep track of all the shoes in your stash. You need SOUL, a state-of-the-art shoe stash organizational platform that is custom designed to meet all of your shoe tracking needs.\n\n </string>
+    <string name="instructions_intro">The 4 Steps of SOUL!!</string>
+    <string name="step_one_label">Step 1</string>
+    <string name="step_two_label">Step 2</string>
+    <string name="step_three_label">Step 3</string>
+    <string name="step_four_label">Step 4</string>
+    <string name="step_one">Add a shoe to your stash!</string>
+    <string name="step_two">Repeat for all the shoes in your wardrobe!</string>
+    <string name="step_three">Gaze in awe at all of your shoes!</string>
+    <string name="step_four">Wear your shoes and conquer the world in style! </string>
+    <string name="next">Next</string>
+    <string name="back">NOPE</string>
+    <string name="start">YEAH</string>
+    <string name="pumped_text">Are you pumped?</string>
 </resources>
+
