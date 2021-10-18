@@ -8,6 +8,7 @@
     <string name="pw_hint">Enter your password</string>
     <string name="create_account">Create Account</string>
     <string name="log_in">Log In</string>
+    <string name="log_out">Log Out</string>
     <string name="logo_content_desc">Sole logo</string>
     <string name="shoes_image_content_desc">A big pile of multi-colored shoes</string>
     <string name="welcome_to_soul">Welcome to SOUL!</string>
@@ -25,5 +26,9 @@
     <string name="back">NOPE</string>
     <string name="start">YEAH</string>
     <string name="pumped_text">Are you pumped?</string>
+    <string name="stash_title">Your Stash</string>
+    <string name="shoe_name">Name</string>
+    <string name="company_label">Company</string>
+    <string name="size_label">Size</string>
 </resources>
 

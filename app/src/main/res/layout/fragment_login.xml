@@ -23,6 +23,7 @@
             style="@style/title_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/basic_margin"
             android:text="@string/login"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -35,13 +36,6 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent=".33" />
 
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/right_vertical_guide"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent=".67" />
 
         <TextView
             android:id="@+id/email_label_text"
@@ -57,16 +51,14 @@
 
         <EditText
             android:id="@+id/email_edit_text"
-            style="@style/input_style"
+            style="@style/email_input_style"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/split_margin"
             android:layout_marginTop="@dimen/basic_margin"
             android:layout_marginEnd="@dimen/basic_margin"
-            android:hint="@string/email_hint"
             android:autofillHints="emailAddress"
-            android:inputType="textEmailAddress"
-            android:minHeight="48dp"
+            android:hint="@string/email_hint"
             android:text="@={loginInfo.email}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/left_vertical_guide"

@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -31,13 +31,16 @@
     <style name="input_style">
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:fontFamily">@font/roboto</item>
-        <item name="android:inputType">textEmailAddress</item>
         <item name="android:textAlignment">textStart</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <style name="email_input_style" parent="input_style">
+        <item name="android:inputType">textEmailAddress</item>
     </style>
 
     <style name="title_style">
         <item name="android:textColor">@color/colorPrimary</item>
-        <item name="android:layout_marginTop">@dimen/basic_margin</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textSize">34sp</item>

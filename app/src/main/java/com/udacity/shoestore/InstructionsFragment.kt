@@ -14,11 +14,14 @@ class InstructionsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val binding = DataBindingUtil.inflate<FragmentInstructionsBinding>(
             inflater, R.layout.fragment_instructions, container, false)
         binding.nopeButton.setOnClickListener{
             it.findNavController().navigate(R.id.action_instructionsFragment_to_welcomeFragment)
+        }
+        binding.yepButton.setOnClickListener{
+            it.findNavController().navigate(R.id.action_instructionsFragment_to_listFragment)
         }
         return binding.root
     }
