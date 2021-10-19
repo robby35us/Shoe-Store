@@ -30,5 +30,15 @@
     <string name="shoe_name">Name</string>
     <string name="company_label">Company</string>
     <string name="size_label">Size</string>
+    <string name="desc_label">Description</string>
+    <string name="description_hint">Tell us more about what makes this pair of shoes so darn special!</string>
+    <string name="name_hint">What kind of shoe?</string>
+    <string name="company_hint">Who makes \'em?</string>
+    <string name="size_hint">Not your IQ</string>
+    <string name="stash_upgrade">Ready to upgrade your stash?</string>
+    <string name="row_of_shoes">A row of shoes</string>
+    <string name="stash_upgraded">Your stash has been upgraded!</string>
+    <string name="is_empty">... Is Empty</string>
+    <string name="empty_stash_helper">It\'s a little dull around here without any shoes. Try clicking the shoe button below to make the most out of Soul.</string>
 </resources>
 

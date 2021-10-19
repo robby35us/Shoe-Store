@@ -7,9 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModelStoreOwner
+import androidx.navigation.findNavController
 import com.udacity.shoestore.databinding.FragmentListBinding
 import com.udacity.shoestore.databinding.ListItemAccentBinding
+import com.udacity.shoestore.databinding.ListItemNoneBinding
 import com.udacity.shoestore.databinding.ListItemPrimaryBinding
 import com.udacity.shoestore.models.Shoe
 
@@ -18,6 +19,7 @@ class ListFragment : Fragment() {
 
     private lateinit var binding: FragmentListBinding
     private lateinit var viewModel : ShoeViewModel
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,29 +30,42 @@ class ListFragment : Fragment() {
             container,
             false
         )
-        viewModel = ViewModelProvider(activity as ViewModelStoreOwner).get(ShoeViewModel::class.java)
+
+        binding.floatingActionButton.setOnClickListener{
+            it.findNavController().navigate(R.id.action_listFragment_to_detailFragment)
+        }
+        viewModel = ViewModelProvider(requireActivity()).get(ShoeViewModel::class.java)
 
         var usePrimaryBinding = true
 
-        for(shoe: Shoe in viewModel.shoeList.value!!) {
-            if(usePrimaryBinding) {
-                val listItemBinding = DataBindingUtil.inflate<ListItemPrimaryBinding>(
-                    inflater, R.layout.list_item_primary, container, false )
-                listItemBinding.shoeData = shoe
-                binding.shoeList.addView(listItemBinding.root)
-                usePrimaryBinding = false
+        viewModel.shoeList.observe(viewLifecycleOwner) { list ->
+            binding.shoeList.removeAllViewsInLayout()
+            if(list.isEmpty()) {
+                binding.shoeList.addView(
+                    DataBindingUtil.inflate<ListItemNoneBinding>(
+                        inflater, R.layout.list_item_none, container, false
+                    ).root
+                )
             } else {
-                val listItemBinding = DataBindingUtil.inflate<ListItemAccentBinding>(
-                    inflater, R.layout.list_item_accent, container, false )
-                listItemBinding.shoeData = shoe
-                binding.shoeList.addView(listItemBinding.root)
-                usePrimaryBinding = true
+                for (shoe: Shoe in list) {
+                    if (usePrimaryBinding) {
+                        val listItemBinding = DataBindingUtil.inflate<ListItemPrimaryBinding>(
+                            inflater, R.layout.list_item_primary, container, false
+                        )
+                        listItemBinding.shoeData = shoe
+                        binding.shoeList.addView(listItemBinding.root)
+                        usePrimaryBinding = false
+                    } else {
+                        val listItemBinding = DataBindingUtil.inflate<ListItemAccentBinding>(
+                            inflater, R.layout.list_item_accent, container, false
+                        )
+                        listItemBinding.shoeData = shoe
+                        binding.shoeList.addView(listItemBinding.root)
+                        usePrimaryBinding = true
+                    }
+                }
             }
         }
         return binding.root
     }
-
-
-
-
 }

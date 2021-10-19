@@ -86,7 +86,5 @@
                 android:textColor="@color/colorAccent"
                 tools:ignore="TextContrastCheck" />
         </FrameLayout>
-
     </LinearLayout>
-
 </layout>

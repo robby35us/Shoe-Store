@@ -29,9 +29,6 @@
         android:label="Instructions"
         tools:layout="@layout/fragment_instructions">
         <action
-            android:id="@+id/action_instructionsFragment_to_welcomeFragment"
-            app:destination="@id/welcomeFragment" />
-        <action
             android:id="@+id/action_instructionsFragment_to_listFragment"
             app:destination="@id/listFragment" />
     </fragment>
@@ -39,5 +36,14 @@
         android:id="@+id/listFragment"
         android:name="com.udacity.shoestore.ListFragment"
         android:label="Stash"
-        tools:layout="@layout/fragment_list" />
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.udacity.shoestore.DetailFragment"
+        android:label="Upgrade"
+        tools:layout="@layout/fragment_detail"/>
 </navigation>
