@@ -11,6 +11,14 @@
             type="com.udacity.shoestore.ShoeViewModel" />
     </data>
 
+    <!-- I chose ConstraintLayout for this project so that I could avoid having to use
+         nested layouts linear layouts to achieve the image, form and button rows.
+
+         NOTE: For some reason the renderer is having trouble finding the "sole_logo_with_text"
+         image. It is showing as an error here in the code window and not showing up in design
+         view, but when I run the app it runs loads just fine. Some kind of glitch with
+         Android Studio-->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/detail_layout"
         android:layout_width="match_parent"

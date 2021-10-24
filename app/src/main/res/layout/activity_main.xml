@@ -3,6 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- When I created the project, Android Studio chooseCoordinator Layout. I don't
+         know enough about it to change it to something else, so I just left it alone. -->
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
 
         android:layout_width="match_parent"

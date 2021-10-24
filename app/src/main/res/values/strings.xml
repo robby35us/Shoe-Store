@@ -38,7 +38,7 @@
     <string name="stash_upgrade">Ready to upgrade your stash?</string>
     <string name="row_of_shoes">A row of shoes</string>
     <string name="stash_upgraded">Your stash has been upgraded!</string>
-    <string name="is_empty">... Is Empty</string>
+    <string name="is_empty">… Is Empty</string>
     <string name="empty_stash_helper">It\'s a little dull around here without any shoes. Try clicking the shoe button below to make the most out of Soul.</string>
 </resources>
 

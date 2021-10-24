@@ -10,6 +10,9 @@
             type="com.udacity.shoestore.models.Shoe" />
     </data>
 
+    <!-- Since this layout is going to be nested into a fragment, I definitely didn't
+         want to use nested linear layouts.-->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/item_layout"
         android:layout_width="match_parent"

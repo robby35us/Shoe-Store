@@ -11,6 +11,9 @@
             type="com.udacity.shoestore.models.LoginInfo" />
     </data>
 
+    <!-- Once again, I chose ConstraintLayout to avoid having nested layouts for the form
+         and button rows.-->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/loginFragment"
         android:layout_width="match_parent"
